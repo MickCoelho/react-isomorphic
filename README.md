@@ -11,7 +11,7 @@ It is a collection of build tools, configuration files, folder structures and mo
 - Watch source files and trigger compilation as required (for both JS and CSS).
 - Deploy your project to a nodeJS server.
 
-A basic demo is available here http://iso-react.jit.su/
+A basic demo (using material-ui as well) is available here http://iso-react.jit.su/
 
 
 ## Perfomance improvements

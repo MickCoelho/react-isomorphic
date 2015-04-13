@@ -27,7 +27,6 @@ When the JS will be executed, it'll:
 This has been done in order to prioritise content loading while respecting a specific performance budget.
 
 
-
 ## Installation
 ```
 git clone ssh://git@github.com:MickCoelho/react-isomorphic.git
@@ -52,7 +51,7 @@ node-sass, node-watch and autoprefixer will also run (using `node sass-script`) 
 Convenience method that will ensure style sheets and javascript are compiled. After this, all assets are moved over to the `build` folder.
 
 ### `npm run test-build`
-Will launch a node server on port 8080 so we can test the build
+Will launch a node server on port 8080.
 
 
 ## Known issues

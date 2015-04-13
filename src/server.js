@@ -75,6 +75,7 @@ server.use( function( req, res ) {
     } );
 
     var content = '';
+    var criticalDeviceStylesSrc = '';
     var criticalCompStylesSrc = '';
     var route;
 
@@ -82,7 +83,8 @@ server.use( function( req, res ) {
     router.run( function( Handler, state ) {
         route = state.routes[state.routes.length - 1];
         if ( route ) {
-            criticalCompStylesSrc = '/' + route.name + '/' + deviceType + '.css';
+            criticalCompStylesSrc = '/' + route.name + '/main.css';
+            criticalDeviceStylesSrc = '/' + route.name + '/' + deviceType + '.css';
         }
         content = React.renderToString( React.createElement( Handler, {
             stylesSrc: criticalCompStylesSrc,
@@ -113,8 +115,8 @@ server.use( function( req, res ) {
     res.write( criticalMainStyles );
 
     //Load current componenet critical styles (only if exists)
-    if ( fs.existsSync( criticalStylePath + criticalCompStylesSrc ) ) {
-        var criticalCompStyles = fs.readFileSync( criticalStylePath + criticalCompStylesSrc );
+    if ( fs.existsSync( criticalStylePath + criticalDeviceStylesSrc ) ) {
+        var criticalCompStyles = fs.readFileSync( criticalStylePath + criticalDeviceStylesSrc );
         res.write( criticalCompStyles );
     }
     res.write( '</style>' );
@@ -124,6 +126,12 @@ server.use( function( req, res ) {
     res.write( content );
     res.write( '</div>' );
     res.write( '</body>' );
+
+    res.write( '<noscript>' );
+        res.write( '<link rel="stylesheet" href="/build/css/non-critical/App/main.css"/>' );
+        res.write( '<link rel="stylesheet" href="/build/css/critical' + criticalCompStylesSrc + '"/>' );
+        res.write( '<link rel="stylesheet" href="/build/css/non-critical' + criticalCompStylesSrc + '"/>' );
+    res.write( '</noscript>' );
 
     // Inject the compiled javascript (served by a WebpackDevServer on dev mode, which lets us 'hot load' scripts in for live editing)
     if ( process.env.NODE_ENV === 'development' ) {

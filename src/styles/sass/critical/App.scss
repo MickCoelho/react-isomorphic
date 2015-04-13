@@ -1,0 +1,38 @@
+/* @import "material-ui-sass/material-ui"; */
+/* @import "critical/material-ui"; */
+
+@import "material-ui-sass/material-ui";
+@import "material-ui-sass/material-ui/components/components";
+@import "material-ui-sass/material-ui/html";
+
+
+
+
+
+
+
+
+
+
+
+body {
+  text-align: center;
+}
+
+.nav{
+  background-color: #dedede;
+  height: 80px;
+  width: 100% !important;
+}
+
+.content-wrapper{
+    padding: 120px 30px 70px 30px;
+    max-width: 500px;
+    margin: auto;
+    p{
+        text-align: left;
+    }
+}
+
+
+

@@ -1,0 +1,33 @@
+# ignore docker make flag
+.dockerbuild
+
+*.pyc
+*.pyo
+.coverage
+
+.DS_Store
+Thumbs.db
+.sass-cache
+.*.sw[a-z]
+
+img-min
+*.map
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Distribution folder that has build files aren't repo controlled.
+dist/
+build/
+
+# Dependency directory
+# Commenting this out is preferred by some people, see
+# https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
+node_modules
+

@@ -1,0 +1,42 @@
+@import "node_modules/material-ui/src/less/scaffolding.less";
+@import "node_modules/material-ui/src/less/core/core.less";
+
+
+@import "node_modules/material-ui/src/less/components/font-icon.less";
+@import "node_modules/material-ui/src/less/components/icon-button.less";
+@import "node_modules/material-ui/src/less/components/flat-button.less";
+@import "node_modules/material-ui/src/less/components/raised-button.less";
+@import "node_modules/material-ui/src/less/components/ink-bar.less";
+@import "node_modules/material-ui/src/less/components/left-nav.less";
+@import "node_modules/material-ui/src/less/components/menu.less";
+@import "node_modules/material-ui/src/less/components/menu-item.less";
+@import "node_modules/material-ui/src/less/components/overlay.less";
+@import "node_modules/material-ui/src/less/components/ripples/focus-ripple.less";
+@import "node_modules/material-ui/src/less/components/ripples/touch-ripple.less";
+
+@import "color-palette.less";
+@import "fonts/style.scss";
+
+
+.leftNav{
+    opacity: 1;
+  // height: 80px !important;
+}
+.content-wrapper{
+  text-align: left;
+}
+
+.code-container{
+    overflow-x: auto;
+}
+
+@import "_mixins.less";
+    @media @mobile {
+        @import "mobile.less";
+    }
+    @media @tablet {
+        @import "tablet.less";
+    }
+    @media @desktop {
+        @import "desktop.less";
+    }

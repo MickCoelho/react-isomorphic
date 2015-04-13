@@ -1,0 +1,116 @@
+@import "node_modules/material-ui/src/less/scaffolding.less";
+@import "node_modules/material-ui/src/less/core/core.less";
+@import "node_modules/material-ui/src/less/components/icon-button.less";
+@import "node_modules/material-ui/src/less/components/app-bar.less";
+
+@import "node_modules/material-ui/src/less/components/enhanced-button.less";
+@import "node_modules/material-ui/src/less/components/ripples/focus-ripple.less";
+@import "node_modules/material-ui/src/less/components/left-nav.less";
+
+
+
+@import "_mixins.less";
+    @media @mobile {
+        @import "mobile.less";
+    }
+    @media @tablet {
+        @import "tablet.less";
+    }
+    @media @desktop {
+        @import "desktop.less";
+    }
+
+
+@primary-1-color: @pink-700;
+@accent-1-color: @amber-700;
+
+body {
+  text-align: center;
+}
+.leftNav{
+    opacity: 0;
+  // height: 80px ;
+}
+
+.content-wrapper{
+    padding: 120px 30px 70px 30px;
+    max-width: 500px;
+    margin: auto;
+    p{
+        text-align: left;
+    }
+}
+
+.content-wrapper{
+  text-align: left;
+}
+
+
+a {
+  color: @accent-1-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* App Specific Styles */
+.mui-app-canvas {
+
+
+  .mui-app-bar {
+    .github-icon-button {
+      float: right;
+      margin-right: -16px;
+    }
+  }
+}
+
+.logo {
+  cursor: pointer;
+  .mui-font-style-headline;
+  .mui-text-full-white;
+  line-height: @app-bar-height;
+  .mui-font-weight-light;
+  background-color: @primary-1-color;
+  padding-left: @desktop-gutter;
+  padding-top: 0;
+  margin-bottom: @desktop-gutter-mini;
+}
+
+
+.code-example {
+  background-color: @white;
+  margin-bottom: 32px;
+
+  .example-label {
+    .mui-font-style-menu;
+    display: inline-block;
+    text-transform: uppercase;
+    color: @min-black;
+    padding: @desktop-gutter-mini;
+    border-right: solid 1px @border-color;
+    border-bottom: solid 1px @border-color;
+    margin-bottom: 0;
+    border-radius: 0 0 2px 0;
+  }
+
+  .example-block,
+  .code-block {
+    padding: @desktop-gutter;
+  }
+
+  .code-block {
+    border-top: solid 1px @border-color;
+    border-radius: 0 0 2px 2px;
+  }
+}
+
+.example-menu {
+  width: (64px * 4);
+}
+
+.example-menu-nested {
+  width: (64px * 3);
+}

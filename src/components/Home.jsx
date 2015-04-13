@@ -32,8 +32,9 @@ var Home = React.createClass( {
 
                     <h2>Installation</h2>
                         <p className="code-container">
-                            <code>git clone ssh://git@stash.rehabstudio.com:7999/~mickaelcoelho/isomorphic-js-skeleton.git<br/>
-                            cd isomorphic-js-skeleton<br/>
+                            <code>
+                            git clone ssh://git@github.com:MickCoelho/react-isomorphic.git<br/>
+                            cd react-isomorphic<br/>
                             sudo npm install</code>
                         </p>
 

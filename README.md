@@ -30,10 +30,8 @@ This has been done in order to prioritise content loading while respecting a spe
 
 ## Installation
 ```
-$ npm install supervisor -g
-
-git clone ssh://git@stash.rehabstudio.com:7999/~mickaelcoelho/isomorphic-js-skeleton.git
-cd isomorphic-js-skeleton
+git clone ssh://git@github.com:MickCoelho/react-isomorphic.git
+cd react-isomorphic
 sudo npm install
 ```
 

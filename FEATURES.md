@@ -7,6 +7,7 @@
 - [x] server hot-reload (ideally for the JS and CSS) while in dev mode
 - [x] inline critical css (aims to reduce the number of files loaded before displaying DOM content)
 - [x] load non-critical css at the end of the pages as external files
+- [ ] Implement React a11y
 - [ ] Router to specify stylesheets path
 - [ ] Filter on the less-script
 - [ ] CLI view/component creation, like a view generator (which will create all the files required for a view, styles/content/logic)

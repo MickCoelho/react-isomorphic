@@ -7,7 +7,7 @@
   "scripts": {
     "sass-script": "node sass-script",
     "less-script": "node less-script",
-    "dev": "NODE_ENV=development node less-script & NODE_ENV=development supervisor --harmony -e js src/server.js & NODE_ENV=development node hotLoadServer.js",
+    "dev": "NODE_ENV=development node less-script & NODE_ENV=development node src/server.js & NODE_ENV=development node hotLoadServer.js",
     "build": "node less-script && NODE_ENV=production webpack -p --progress --colors --verbose --display-error-details --config",
     "test-build": "NODE_ENV=production node --harmony src/server.js",
     "start": "node --harmony src/server.js"

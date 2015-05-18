@@ -16,7 +16,8 @@ var inputPath = 'src/styles/less',
     fontsOutput = 'build/fonts';
 
 var computeLess = function( filename ) {
-    console.log( filename, ' changed.' );
+
+    // console.log( filename, ' changed.' );
     updatedStyle = fs.readFileSync( filename, "utf8" );
     var outputFilename = filename.replace( inputPath + '/', outputPath ).replace( '.less', '.css' );
     less.render( updatedStyle, {
@@ -47,10 +48,12 @@ var computeLess = function( filename ) {
                             exportStylesheet( output, outputFilename, false );
                         }
                     } );
-                    console.log( '     ' + outputFilename, ' generated.' );
+
+                    // console.log( clc.blue( '     ' + outputFilename, ' generated.'  ));
                 }else {
                     exportStylesheet( output, outputFilename, false );
-                    console.log( '     ' + outputFilename, ' generated.' );
+
+                    // console.log( clc.blue( '     ' + outputFilename, ' generated.' ) );
                 }
             },
             function( error ) {
@@ -91,10 +94,12 @@ var walk = function( dir, done ) {
                 } else {
 
                     //Filter to get only .less files
-                    if ( file.search( '.less' ) > -1 ) {
+                    if ( file.match( /.less/g ).length > 1 ) {
 
                         //do not use _partials
                         if ( file.search( '/_' ) === -1 ) {
+
+                            // console.log( clc.blue( file ) );
                             computeLess( file );
                         }
                     }
@@ -115,7 +120,6 @@ walk( inputPath, function( error ) {
 } );
 
 //Copy font folder to the build
-
 fse.copy( fontsInput, fontsOutput, function( err ) {
     if ( err ) {
         console.log( clc.red( 'Fonts copy: ' + err ) );

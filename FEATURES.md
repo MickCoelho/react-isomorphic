@@ -8,6 +8,7 @@
 - [x] inline critical css (aims to reduce the number of files loaded before displaying DOM content)
 - [x] load non-critical css at the end of the pages as external files
 - [x] Filter on the less-script
+- [ ] Create webpack entries per route
 - [ ] Router to specify stylesheets path
 - [ ] CLI view/component creation, like a view generator (which will create all the files required for a view, styles/content/logic)
 - [ ] implementing a transitions engine based on existing ReactJS features

@@ -55,7 +55,7 @@ Will launch a node server on port 8080.
 
 
 ## Known issues
-For every component created and added to the `routes.js`, the component will try to find hits own critical and non-critical stylesheets. For now, we'll have to create an empty file [my-component].scss file into 'styles/critical' and 'styles/non-critical' so Webpack won't throw an error.
+For every component created and added to the `routes.js`, the component will try to find its own critical and non-critical stylesheets. For now, we'll have to create an empty file [my-component].scss file into 'styles/critical' and 'styles/non-critical' so Webpack won't throw an error.
 Also, the name of these linked critical/non-critical stylesheets is (for now) the same as the `name` values which are in the `routes.js`. Plan being to specify the name of these stylesheets into the `routes.js` but separately.
 Tasks still need to be created in order to optimise external assets (such as fonts, images...), tests also need to be implemented.
 
